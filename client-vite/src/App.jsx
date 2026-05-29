@@ -20,7 +20,7 @@ const App = () => {
   const clickAddTask = (event) => {
     event.preventDefault();
 
-    ffetch(`${import.meta.env.VITE_API_URL}/api/tasks/add`, {
+    fetch(`${import.meta.env.VITE_API_URL}/api/tasks/add`, {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title: newTaskTitle }),
